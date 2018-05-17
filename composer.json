@@ -1,0 +1,22 @@
+{
+    "name": "linuxartisan/tomoney",
+    "description": "A library to convert a number in various money formats",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sandesh Patil",
+            "email": "sandesh87@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.35"
+    },
+    "autoload": {
+        "psr-0": {
+            "Convert": "src/"
+        }
+    },
+    "version": "1.0.0", //Version of the package
+    "minimum-stability": "dev" //Stability
+}
