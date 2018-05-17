@@ -17,6 +17,5 @@
             "Convert": "src/"
         }
     },
-    "version": "1.0.0", //Version of the package
-    "minimum-stability": "dev" //Stability
+    "minimum-stability": "dev"
 }
