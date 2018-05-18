@@ -13,8 +13,8 @@
         "php": ">=5.6.35"
     },
     "autoload": {
-        "psr-0": {
-            "Convert": "src/"
+        "psr-4": {
+            "": "src/"
         }
     },
     "minimum-stability": "dev"
