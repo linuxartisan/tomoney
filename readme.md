@@ -28,6 +28,12 @@ And then execute
 $ composer install
 ```
 
+
+After installation, it is recommended to execute
+```
+$ composer dump-autoload
+```
+
 ## Usage
 
 Using composer:
@@ -35,12 +41,10 @@ Using composer:
 ```php
 <?php
 
-require 'vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 use Convert\ConvertMoney;
 
 echo ConvertMoney::toMoney(1234.56);
 ```
-
-
 
