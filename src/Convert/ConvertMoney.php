@@ -1,10 +1,12 @@
 <?php
 
-namespace ToMoney\Convert;
+namespace LinuxArtisan\ToMoney\Convert;
 
 
 /**
 * This class performs various conversions on money format.
+*
+* @author linuxartisan
 */
 class ConvertMoney
 {

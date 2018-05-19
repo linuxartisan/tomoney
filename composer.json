@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "ToMoney\\": "src/ToMoney"
+            "LinuxArtisan\\ToMoney\\": "src/"
         }
     },
     "minimum-stability": "dev"
