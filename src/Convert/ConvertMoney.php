@@ -1,13 +1,13 @@
 <?php
 
-    namespace Convert;
+namespace LinuxArtisan\ToMoney\Convert;
 
 
-    /**
-    * This class performs various conversions on money format.
-    */
-    class ConvertMoney
-    {
+/**
+* This class performs various conversions on money format.
+*/
+class ConvertMoney
+{
 
     /**
      * Formats the number into Indian money pattern.

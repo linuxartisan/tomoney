@@ -43,8 +43,9 @@ Using composer:
 
 require __DIR__ . '/vendor/autoload.php';
 
-use Convert\ConvertMoney;
+use LinuxArtisan\ToMoney\Convert\ConvertMoney;
 
-echo ConvertMoney::toMoney(1234.56);
+echo ConvertMoney::toIndian(1234.56);
+echo ConvertMoney::toUS(1234.56);
 ```
 

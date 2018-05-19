@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../vendor/autoload.php'; // Autoload files using Composer autoload
 
-use \Convert\ConvertMoney;
+use LinuxArtisan\ToMoney\Convert\ConvertMoney;
 
 print ConvertMoney::toIndian(123456127.73)."\n";
 print ConvertMoney::toIndian(123456127.731)."\n";
