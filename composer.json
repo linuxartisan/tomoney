@@ -10,11 +10,11 @@
         }
     ],
     "require": {
-        "php": ">=5.6.35"
+        "php": "^5.3"
     },
     "autoload": {
         "psr-4": {
-            "": "src/"
+            "LinuxArtisan\\ToMoney\\": "src/"
         }
     },
     "minimum-stability": "dev"
