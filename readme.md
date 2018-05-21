@@ -2,10 +2,6 @@
 
 A simple PHP library to convert a number to money format.
 
-## Under Development
-
-This library is still under development and hence is not ready for use.
-
 
 ## Installation
 
@@ -29,10 +25,11 @@ $ composer install
 ```
 
 
-After installation, execute to dump the autoloader
+After installation, to dump the autoloader, execute
 ```
 $ composer dump-autoload
 ```
+
 
 
 ## Usage
@@ -44,9 +41,14 @@ require __DIR__ . '/vendor/autoload.php';
 
 use LinuxArtisan\ToMoney\Money;
 
-echo Money::formatToIndian(1234.56); // to Indian
-echo Money::formatToUS(1234.56); // to US
-echo Money::formatTo('en_GB', 1234.56); // to custom
+echo Money::formatToIndian(123456127.73); // to Indian
+// 12,34,56,127.73
+
+echo Money::formatToUS(123456127.73); // to US
+// 123,456,127.73
+
+echo Money::formatTo('en_GB', 123456127.73); // to custom
+// 123,456,127.73
 ```
 
 
