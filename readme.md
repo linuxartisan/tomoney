@@ -29,23 +29,49 @@ $ composer install
 ```
 
 
-After installation, it is recommended to execute
+After installation, execute to dump the autoloader
 ```
 $ composer dump-autoload
 ```
 
-## Usage
 
-Using composer:
+## Usage
 
 ```php
 <?php
 
 require __DIR__ . '/vendor/autoload.php';
 
-use LinuxArtisan\ToMoney\Convert\ConvertMoney;
+use LinuxArtisan\ToMoney\Money;
 
-echo ConvertMoney::toIndian(1234.56);
-echo ConvertMoney::toUS(1234.56);
+echo Money::formatToIndian(1234.56); // to Indian
+echo Money::formatToUS(1234.56); // to US
+echo Money::formatTo('en_GB', 1234.56); // to custom
 ```
 
+
+Numeric values may be passed as strings too
+```php
+
+echo Money::formatToIndian('12345.67'); // to Indian
+echo Money::formatToUS('1234.56'); // to US
+echo Money::formatTo('en_GB', '1234.56'); // to custom
+```
+
+But this is not recommended, as a non-numeric string will be returned as '0'.
+```php
+return Money::formatTo('en_GB', "12abcd127.731");
+```
+will return `0` as a string.
+
+
+Also, if a particular locale is not supported, the same amount will be returned without formatting as a string.
+
+### Note
+
+To view all the available locales on your system, give the following command in the terminal
+
+```
+$ locale -a
+```
+These locales may be used as argument to the `formatTo` function.
