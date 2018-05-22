@@ -42,19 +42,18 @@ require __DIR__ . '/vendor/autoload.php';
 use LinuxArtisan\ToMoney\Money;
 
 echo Money::formatToIndian(123456127.73); // to Indian
-// 12,34,56,127.73
+// "12,34,56,127.73"
 
 echo Money::formatToUS(123456127.73); // to US
-// 123,456,127.73
+// "123,456,127.73"
 
 echo Money::formatTo('en_GB', 123456127.73); // to custom
-// 123,456,127.73
+// "123,456,127.73"
 ```
 
 
 Numeric values may be passed as strings too
 ```php
-
 echo Money::formatToIndian('12345.67'); // to Indian
 echo Money::formatToUS('1234.56'); // to US
 echo Money::formatTo('en_GB', '1234.56'); // to custom
@@ -67,7 +66,12 @@ return Money::formatTo('en_GB', "12abcd127.731");
 will return `0` as a string.
 
 
-Also, if a particular locale is not supported, the same amount will be returned without formatting as a string.
+Also, if a particular locale is not supported, the same amount will be returned as a string without formatting.
+```php
+return Money::formatTo('some_unsupported_locale', 12345);
+// "12345"
+```
+
 
 ### Note
 

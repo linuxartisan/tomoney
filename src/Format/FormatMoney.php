@@ -25,6 +25,10 @@ class FormatMoney
             // Try and set the appropriate locale
             if (self::tryAndSetLocale('en_IN')) {
                 $amount = money_format('%!i', $amount);
+
+                // Reset the locale to default
+                self::resetLocale();
+
                 return $amount;
             }
 
@@ -49,6 +53,10 @@ class FormatMoney
             // Try and set the appropriate locale
             if (self::tryAndSetLocale('en_US')) {
                 $amount = money_format('%!i', $amount);
+
+                // Reset the locale to default
+                self::resetLocale();
+
                 return $amount;
             }
 
@@ -74,6 +82,10 @@ class FormatMoney
             // Try and set the appropriate locale
             if (self::tryAndSetLocale($locale)) {
                 $amount = money_format('%!i', $amount);
+
+                // Reset the locale to default
+                self::resetLocale();
+
                 return $amount;
             }
 
@@ -89,6 +101,16 @@ class FormatMoney
     /*******************************
      * Helper functions
      *******************************/
+
+    /**
+     * Resets the system locale to the default one.
+     *
+     * @return void
+     */
+    protected static function resetLocale()
+    {
+        setlocale(LC_MONETARY, NULL);
+    }
 
     /**
      * Tries to set locale to the desired locale.
